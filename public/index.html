@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <!-- <title><%= webpackConfig.name %></title> -->
+  <title><%= process.env.VUE_APP_NAME %></title>
+  <!--[if IE]><script>window.location.href='/nonsupport.html';</script><![endif]-->
+  <script type="text/javascript">
+    /** IE9只有打开控制台之后才会有console对象,如果不修复此兼容情况,会无法显示页面 */
+    if (typeof window.console == 'undefined') {
+      window.console = {}
+      var methods = ['log', 'info', 'warn', 'error', 'assert', 'dir', 'clear', 'profile', 'profileEnd']
+      for (var index in methods) {
+        window.console[methods[index]] = function () { }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="<%= BASE_URL %>static/devices/devices.min.css" type="text/css">
+</head>
+
+<body>
+  <script src="<%= BASE_URL %>static/tinymce/tinymce.min.js"></script>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
