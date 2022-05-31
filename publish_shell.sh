@@ -5,15 +5,15 @@ then
   nginx || ! echo "nginx not exists or not in PATH" || exit
 fi
 
-rm -rf /home/test_team/front/dist/
-p_dir='/home/test_team/front/za-test-platform-web'
+rm -rf /home/woody/front/dist/
+p_dir='/home/woody/front/zains-test-web'
 if [[ ! -d "p_dir" ]]
 then
-  cd /home/test_team/front/
-  git clone -b dev ssh://git@172.16.6.108:35000/za-life/za-test-platform-web.git
-  cd ./za-test-platform-web/
+  cd /home/woody/front/
+  git clone -b dev git@github.com:woody3/zains-test-web.git
+  cd ./zains-test-web/
 else
-  cd /home/test_team/front/za-test-platform-web/
+  cd /home/woody/front/zains-test-web/
   git pull origin dev
 fi
 
