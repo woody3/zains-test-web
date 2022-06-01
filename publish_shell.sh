@@ -18,4 +18,4 @@ else
 fi
 
 npm run build
-mv ./dist ../dist
+mv ./dist ../dist && echo "publish success"
